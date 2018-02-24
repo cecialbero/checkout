@@ -7,6 +7,42 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlanInfoComponent implements OnInit {
 
+  planList = [
+    {
+      info: '5 Project Rooms'
+    },
+    {
+      info: 'xGB Storage'
+    },
+    {
+      info: 'Visual Thinking Tools'
+    },
+    {
+      info: 'Collaboration Tools'
+    },
+    {
+      info: 'Self-Service Support'
+    },
+    {
+      info: '-'
+    },
+    {
+      info: '-'
+    },
+    {
+      info: '-'
+    },
+    {
+      info: '-'
+    },
+    {
+      info: '-'
+    },
+    {
+      info: '-'
+    }
+  ];
+
   constructor() { }
 
   ngOnInit() {
