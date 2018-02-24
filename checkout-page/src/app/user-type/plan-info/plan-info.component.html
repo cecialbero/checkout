@@ -1,3 +1,11 @@
-<p>
-  plan-info works!
-</p>
+<div class="plan-info">
+  <div class="choose-plan">CHOOSE THIS PLAN IF YOU'RE A...</div>
+  <p>Growing startup</p>
+  <span class="dot">•</span>
+  <p>Freelancer with a few rotating clients</p>
+  <hr>
+  <h4 class="brand-color bold">Startup Includes:</h4>
+  <ul>
+    <li *ngFor="let plan of planList">{{plan.info}}</li>
+  </ul>
+</div>
