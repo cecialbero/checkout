@@ -1,1 +1,55 @@
+/*@font-face {
+    font-family: 'proxima_novalight';
+    src: url('../assets/fonts/proximanova-light.woff2') format('woff2'),
+         url('../assets/fonts/proximanova-light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_nova_rgregular';
+  src: url('../assets/fonts/proximanova-regular.ttf'),
+      url('../assets/fonts/proximanova-regular.woff2') format('woff2'),
+      url('../assets/fonts/proximanova-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_novasemibold';
+  src: url("../assets/fonts/proximanova-semibold.ttf"),
+      url("../assets/fonts/proximanova-semibold.woff2") format('woff2'),
+      url("../assets/fonts/proximanova-semibold.woff") format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'proxima_nova_rgbold';
+    src: url('../assets/fonts/proximanova-bold.woff2') format('woff2'),
+         url('../assets/fonts/proximanova-bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}*/
+
+@import '../assets/scss/variable.scss';
+@import '../assets/scss/text.scss';
+@import '../assets/scss/button.scss';
 @import '../assets/scss/grid.scss';
+
+//RESET STYLES
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'proxima_nova_rgregular';
+  color: $txt-color;
+}
+
+hr {
+  border: 1px solid #EDEDED;
+}
