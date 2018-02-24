@@ -74,6 +74,10 @@ p {
     }
   }
 }
+
+li {
+  list-style: none;
+}
 /*End Reset Styles*/
 
 .wrapper {
@@ -116,3 +120,40 @@ header {
   font-size: 18px;
 }
 /*End Current Plan*/
+
+/*Plan Info*/
+.plan-info {
+  text-align: center;
+
+  hr {
+    width: 40px;
+    height: 2px;
+    background-color: #CCC;
+    border: none;
+    margin: $gutter*2 auto $gutter auto;
+  }
+
+  ul {
+    margin-top: $gutter;
+
+    li {
+      font-family: 'proxima_novasemibold';
+      font-size: 16px;
+      margin-top: $gutter;
+    }
+  }
+}
+
+.choose-plan {
+  font-family: 'proxima_novasemibold';
+  font-size: 13px;
+  margin-bottom: $gutter - 5px;
+}
+
+.dot {
+  display: block;
+  color: #D8D8D8;
+  line-height: 5px;
+  margin-bottom: 9px;
+}
+/*End Plan Info*/
