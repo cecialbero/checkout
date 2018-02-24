@@ -38,7 +38,7 @@
 @import '../assets/scss/button.scss';
 @import '../assets/scss/grid.scss';
 
-//RESET STYLES
+/*Reset Styles*/
 * {
   box-sizing: border-box;
   padding: 0;
@@ -52,10 +52,28 @@ body {
   color: $txt-color;
 }
 
-hr {
-  border: 1px solid #EDEDED;
-  margin: 20px 0;
+a {
+  color: $txt-color;
+  border-bottom: 1px dotted $txt-color;
+
+  &:hover {
+    color: $light-txt-color;
+    border-bottom: 1px dotted $light-txt-color;
+  }
 }
+
+p {
+  a {
+    color: $light-txt-color;
+    border-bottom: 1px dotted $light-txt-color;
+
+    &:hover {
+      color: $txt-color;
+      border-bottom: 1px dotted $txt-color;
+    }
+  }
+}
+/*End Reset Styles*/
 
 .wrapper {
   width: 100%;
@@ -74,15 +92,21 @@ header {
 }
 /*end Header*/
 
-/*Current Plan Info*/
+/*Current Plan*/
 .current-plan-info {
-  display: flex;
-  flex-direction: flex-end;
   padding-left: 110px;
   padding-right: 110px;
+
+  > div {
+    display: flex;
+    align-items: flex-end;
+    padding: 20px 0;
+    border-top: 1px solid #EDEDED;
+    border-bottom: 1px solid #EDEDED;
+  }
 }
 
 .count-down-txt {
   font-size: 18px;
 }
-/*End Current Plan Info*/
+/*End Current Plan*/
