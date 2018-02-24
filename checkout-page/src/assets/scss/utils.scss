@@ -1,3 +1,4 @@
+/*Aligment*/
 .center {
   margin: 0 auto;
 }
@@ -8,4 +9,9 @@
 
 .right-txt {
   text-align: right;
+}
+
+/*Color*/
+.brand-color {
+  color: $brand-color;
 }
