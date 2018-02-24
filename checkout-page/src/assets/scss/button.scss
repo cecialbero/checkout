@@ -1,0 +1,27 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  text-transform: uppercase;
+  min-height: 34px;
+  min-width: 210px;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background-color: $brand-color;
+  color: $invert-txt-color;
+}
+
+.btn-secondary {
+  background-color: $secondary-color;
+  color: $invert-txt-color;
+}
+
+.btn-outline {
+  height: 30px;
+  width: 206px;
+  border: 2px solid $secondary-color;
+  color: $txt-color;
+}
