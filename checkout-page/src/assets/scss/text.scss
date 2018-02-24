@@ -4,41 +4,45 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 h1 {
+  font-family: 'proxima_novalight';
   font-size: 32px;
   font-weight: 300;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 9px;
 }
 
 h2 {
   font-size: 24px;
   font-weight: 400;
   line-height: 28px;
-  margin-bottom: 10px;
+  margin-bottom: 9px;
 }
 
 h3 {
-  font-size: 20px;
+  font-family: 'proxima_novasemibold';
   font-weight: 600;
-  margin-bottom: 10px;
+  font-size: 20px;
+  margin-bottom: 9px;
 }
 
 h4 {
   font-size: 16px;
   font-weight: 400;
   text-transform: uppercase;
+    margin-bottom: 9px;
 }
 
 p {
+  font-size: 14px;
   color: $light-txt-color;
   line-height: 18px;
-  margin-bottom: 10px;
+  margin-bottom: 9px;
 }
 
 .semi-bold {
-  font-weight: 600;
+  font-family: 'proxima_novasemibold';
 }
 
-.bold {
-  font-weight: 700;
+.bold, b {
+  font-family: 'proxima_nova_rgbold';
 }
