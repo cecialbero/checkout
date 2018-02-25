@@ -7,6 +7,7 @@
   min-height: 34px;
   min-width: 210px;
   border-radius: $border-radius;
+  border: none;
 }
 
 .btn-primary {
@@ -20,8 +21,13 @@
 }
 
 .btn-outline {
+  background-color: #FFF;
   height: 30px;
   width: 206px;
   border: 2px solid $secondary-color;
   color: $txt-color;
+}
+
+.btn + .btn {
+  margin-top: 10px;
 }

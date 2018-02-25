@@ -7,9 +7,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SliderComponent implements OnInit {
 
+  monthValue = true;
+  yearValue = false;
+
+  startup = {
+    users: 5,
+    month: 29,
+    year: 300
+  };
+
+  business = {
+    users: 5,
+    year: 600,
+  };
+
+  enterprise = {
+    users: 30
+  };
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onSelectMonth() {
+    this.yearValue = false;
+    this.monthValue = true;
+  }
+
+  onSelectYear() {
+    this.monthValue = false;
+    this.yearValue = true;
   }
 
 }
