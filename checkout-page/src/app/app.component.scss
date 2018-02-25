@@ -83,7 +83,7 @@ li {
 .wrapper {
   width: 100%;
   max-width: 980px;
-  margin: 0 auto;
+  margin: 0 auto $gutter*3 auto;
   background-color: #FFF;
   border-radius: $border-radius;
   padding-top: $gutter*2;
@@ -104,15 +104,33 @@ header {
 
 /*Current Plan*/
 .current-plan-info {
-  padding-left: 110px;
-  padding-right: 110px;
+
+  @media (min-width: 768px) {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+
+  .col + .col {
+    text-align: center;
+
+    @media (min-width: 768px) {
+      text-align: right;
+    }
+  }
 
   > div {
-    display: flex;
-    align-items: flex-end;
+    display: inline-block;
+    width: 100%;
     padding: 20px 0;
     border-top: 1px solid #EDEDED;
     border-bottom: 1px solid #EDEDED;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      display: flex;
+      align-items: flex-end;
+      text-align: inherit;
+    }
   }
 
   p {
@@ -165,23 +183,41 @@ header {
 
 /*Slider*/
 .slider {
-  margin: 0 $gutter/2;
+  margin: 30px $gutter/2;
 
   article {
     display: inline-block;
     vertical-align: middle;
-    margin-left: -6px;
-    width: 31%;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
     min-height: 340px;
     padding: $gutter 0;
     border: 2px solid $secondary-color;
+
+    @media (min-width: 960px) {
+      width: 31%;
+    }
+
+    @media (min-width: 768px) {
+      width: 33%;
+      margin-right: 0;
+      margin-left: -6px;
+    }
   }
 
   article:nth-of-type(2) {
-    width: 39%;
-    min-height: 370px;
     background-color: $secondary-color;
     color: $invert-txt-color;
+
+    @media (min-width: 768px) {
+      width: 39%;
+    }
+
+    @media (min-width: 768px) {
+      width: 35%;
+      min-height: 370px;
+    }
   }
 
   .slider-big-txt {
