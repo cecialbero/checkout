@@ -1,13 +1,43 @@
 <section>
   <div class="row">
     <div class="col four">
-      <app-plan-info></app-plan-info>
+      <div class="plan-info">
+        <div class="choose-plan">CHOOSE THIS PLAN IF YOU'RE A...</div>
+        <p>Growing startup</p>
+        <span class="dot">•</span>
+        <p>Freelancer with a few rotating clients</p>
+        <hr>
+        <h4 class="brand-color bold">Startup Includes:</h4>
+        <ul>
+          <li *ngFor="let plan of startupList">{{plan.info}}</li>
+        </ul>
+      </div>
     </div>
     <div class="col four">
-      <app-plan-info></app-plan-info>
+      <div class="plan-info">
+        <div class="choose-plan">CHOOSE THIS PLAN IF YOU'RE A...</div>
+        <p>Leading design team within a big company</p>
+        <span class="dot">•</span>
+        <p>Distributed business in which visual collaboration is key to success</p>
+        <hr>
+        <h4 class="brand-color bold">Business Includes:</h4>
+        <ul>
+          <li *ngFor="let plan of businessList">{{plan.info}}</li>
+        </ul>
+      </div>
     </div>
     <div class="col four">
-      <app-plan-info></app-plan-info>
+      <div class="plan-info">
+        <div class="choose-plan">CHOOSE THIS PLAN IF YOU'RE A...</div>
+        <p>Business that successfully integrated MURAL and is ready to deploy at scale</p>
+        <span class="dot">•</span>
+        <p>Design-led Fortune 1000 Company</p>
+        <hr>
+        <h4 class="brand-color bold">Enterprise Includes:</h4>
+        <ul>
+          <li *ngFor="let plan of enterpriseList">{{plan.info}}</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>

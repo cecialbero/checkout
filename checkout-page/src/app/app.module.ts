@@ -7,7 +7,6 @@ import { HeaderComponent } from './header/header.component';
 import { MainInfoComponent } from './main-info/main-info.component';
 import { SliderComponent } from './slider/slider.component';
 import { UserTypeComponent } from './user-type/user-type.component';
-import { PlanInfoComponent } from './user-type/plan-info/plan-info.component';
 
 
 @NgModule({
@@ -16,8 +15,7 @@ import { PlanInfoComponent } from './user-type/plan-info/plan-info.component';
     HeaderComponent,
     MainInfoComponent,
     SliderComponent,
-    UserTypeComponent,
-    PlanInfoComponent
+    UserTypeComponent
   ],
   imports: [
     BrowserModule
