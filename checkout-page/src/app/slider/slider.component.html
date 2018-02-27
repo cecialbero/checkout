@@ -4,13 +4,13 @@
       <h2 class="center-txt">Choose a plan that works best for your needs and your team size.<br>And leave some room to grow!</h2>
 
       <div class="slider center-txt">
+        <!-- First Article -->
         <article>
           <div class="slider-big-txt">Startup</div>
           <hr>
           <div class="slider-big-txt">{{startup.users}}</div>
           <span class="slider-small-txt">users</span>
           <hr>
-
           <div class="month-year">
             <div>
               <input
@@ -35,16 +35,32 @@
 
           <button class="btn btn-secondary center">Choose this plan</button>
         </article>
+
+        <!-- Second Article -->
         <article>
           <div class="slider-big-txt">Business</div>
           <hr>
           <div class="slider-big-txt">{{business.users}}</div>
           <div class="slider-small-txt">users</div>
-    
-          <span class="slider-big-txt">${{business.year}}</span>
+
+          <div class="range-container">
+            <input
+            #ranger
+            type="range"
+            min="600"
+            max="1000"
+            value="600"
+            step="100"
+            (input)="valueRange(ranger.value)"
+            class="range">
+          </div>
+
+          <span class="slider-big-txt">${{businessAmountPerYear}}</span>
           <span class="slider-small-txt"> / year</span>
           <button class="btn btn-primary center">Choose this plan</button>
         </article>
+
+        <!-- Third Article -->
         <article>
           <div class="slider-big-txt">Enterprise</div>
           <hr>
