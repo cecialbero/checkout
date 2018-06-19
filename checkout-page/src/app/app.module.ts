@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { MainInfoComponent } from './main-info/main-info.component';
-import { SliderComponent } from './slider/slider.component';
+import { PlanComponent } from './plan/plan.component';
 import { UserTypeComponent } from './user-type/user-type.component';
 
 
@@ -14,7 +14,7 @@ import { UserTypeComponent } from './user-type/user-type.component';
     AppComponent,
     HeaderComponent,
     MainInfoComponent,
-    SliderComponent,
+    PlanComponent,
     UserTypeComponent
   ],
   imports: [

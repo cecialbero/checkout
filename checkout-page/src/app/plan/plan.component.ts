@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-slider',
-  templateUrl: './slider.component.html',
-  styleUrls: ['./slider.component.scss']
+  selector: 'app-plan',
+  templateUrl: './plan.component.html',
+  styleUrls: ['./plan.component.scss']
 })
-export class SliderComponent implements OnInit {
+export class PlanComponent implements OnInit {
 
   monthValue = true;
   yearValue = false;
