@@ -1,0 +1,9 @@
+<input
+#ranger
+class="range"
+type="range"
+[min]="minValue"
+[max]="maxValue"
+[value]="initialValue"
+[step]="step"
+(input)="valueRange(ranger.value)">
