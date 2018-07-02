@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserSliderYearComponent } from '../shared/components/user-slider-year/user-slider-year.component';
 
 @Component({
   selector: 'app-plan',
@@ -41,29 +42,5 @@ export class PlanComponent implements OnInit {
     this.yearValue = true;
   }
 
-  valueRange(value) {
-    this.businessAmountPerYear = value;
-
-    switch (value) {
-      case '600':
-        this.business.users = 5;
-        break;
-
-      case '700':
-        this.business.users = 6;
-        break;
-
-      case '800':
-        this.business.users = 7;
-        break;
-
-      case '900':
-        this.business.users = 8;
-        break;
-
-      default:
-        this.business.users = 10;
-    }
-  }
 
 }

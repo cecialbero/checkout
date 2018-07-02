@@ -40,23 +40,7 @@
         <article>
           <div class="slider-big-txt">Business</div>
           <hr>
-          <div class="slider-big-txt">{{business.users}}</div>
-          <div class="slider-small-txt">users</div>
-
-          <div class="range-container">
-            <input
-            #ranger
-            type="range"
-            min="600"
-            max="1000"
-            value="600"
-            step="100"
-            (input)="valueRange(ranger.value)"
-            class="range">
-          </div>
-
-          <span class="slider-big-txt">${{businessAmountPerYear}}</span>
-          <span class="slider-small-txt"> / year</span>
+          <app-user-slider-year numberOfUsers="5" pricePerYear="200"></app-user-slider-year>
           <button class="btn btn-primary center">Choose this plan</button>
         </article>
 
