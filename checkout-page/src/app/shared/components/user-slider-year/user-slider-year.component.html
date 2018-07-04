@@ -3,10 +3,11 @@
 
 <div class="range-container">
   <app-slider
-  minValue="600"
-  maxValue="1000"
-  step="100"
-  initialValue="700"></app-slider>
+  [minValue]="minValue"
+  [maxValue]="maxValue"
+  [step]="step"
+  [initialValue]="initialValue"
+  (valueInput)="showValue($event)"></app-slider>
 </div>
 
 <span class="slider-big-txt">${{pricePerYear}}</span>
