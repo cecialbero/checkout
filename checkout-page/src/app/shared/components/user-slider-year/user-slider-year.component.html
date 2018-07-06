@@ -10,5 +10,5 @@
   (valueInput)="showValue($event)"></app-slider>
 </div>
 
-<span class="slider-big-txt">${{pricePerYear}}</span>
+<span class="slider-big-txt">{{pricePerYear | currency:'$':'symbol':'1.0'}}</span>
 <span class="slider-small-txt"> / year</span>
