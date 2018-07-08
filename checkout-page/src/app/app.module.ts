@@ -9,6 +9,7 @@ import { PlanComponent } from './plan/plan.component';
 import { UserTypeComponent } from './user-type/user-type.component';
 import { SliderComponent } from './shared/components/slider/slider.component';
 import { UserSliderYearComponent } from './shared/components/user-slider-year/user-slider-year.component';
+import { PlansService } from './services/plans.service';
 
 
 @NgModule({
@@ -24,7 +25,9 @@ import { UserSliderYearComponent } from './shared/components/user-slider-year/us
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    PlansService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
