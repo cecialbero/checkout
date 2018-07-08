@@ -13,8 +13,7 @@ export class SliderComponent implements OnInit {
   @Input() maxValue: number;
   @Output() valueInput = new EventEmitter();
 
-  public value: number;
-  public eventValue: number;
+  public newValue: number;
   constructor() {
   }
 
@@ -22,8 +21,8 @@ export class SliderComponent implements OnInit {
   }
 
   valueRange(event) {
-    this.value = event.target.value;
-    this.valueInput.emit({value: this.value});
+    this.newValue = event.target.value;
+    this.valueInput.emit({value: this.newValue});
   }
 
 }
