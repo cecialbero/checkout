@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { SliderComponent } from '../slider/slider.component';
+import { PlansService } from '../../../services/plans.service';
 
 @Component({
   selector: 'app-user-slider-year',
@@ -8,43 +9,28 @@ import { SliderComponent } from '../slider/slider.component';
 })
 export class UserSliderYearComponent implements OnInit {
 
-  // @Input() numberOfUsers: number;
-  // @Input() pricePerYear: number;
   @Input() step: number;
   @Input() initialValue: number;
   @Input() minValue: number;
   @Input() maxValue: number;
 
-  numberOfUsers = 4;
-  pricePerYear = 280;
+  numberOfUsers;
+  pricePerYear;
+  newValue;
+  plans;
 
-  constructor() { }
+  constructor(service: PlansService) {
+    this.plans = service.getUserAndPrice('200');
+    this.numberOfUsers = this.plans.numberOfUsers;
+    this.pricePerYear = this.plans.pricePerYear;
+  }
 
   ngOnInit() {
   }
 
   showValue(event) {
-    switch (event.value) {
-      case '200':
-        this.numberOfUsers = 2;
-        this.pricePerYear = 200;
-        break;
-
-      case '400':
-        this.numberOfUsers = 3;
-        this.pricePerYear = 250;
-        break;
-
-      case '600':
-        this.numberOfUsers = 4;
-        this.pricePerYear = 280;
-        break;
-
-      case '800':
-        this.numberOfUsers = 5;
-        this.pricePerYear = 320;
-        break;
-    }
+    this.newValue = event.value;
+    return this.newValue;
   }
 
 }
