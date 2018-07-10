@@ -5,29 +5,6 @@ export class PlansService {
 
   constructor() { }
 
-  // private plans: Array<any> = [
-  //   {
-  //     numberOfUsers: 6,
-  //     firstPlanPrice: 200
-  //   },
-  //   {
-  //     numberOfUsers: 7,
-  //     secondPlanPrice: 250
-  //   },
-  //   {
-  //     numberOfUsers: 8,
-  //     thirdPlanPrice: 280
-  //   },
-  //   {
-  //     numberOfUsers: 10,
-  //     FourthPlanPrice: 320
-  //   }
-  // ];
-
-  // getPlans() {
-  //   return this.plan;
-  // }
-
   getUserAndPrice(value) {
     switch (value) {
       case '200':
@@ -51,6 +28,11 @@ export class PlansService {
       return {
         numberOfUsers: 10,
         pricePerYear: 320
+      };
+      default:
+      return {
+        numberOfUsers: 7,
+        pricePerYear: 250
       };
     }
   }
