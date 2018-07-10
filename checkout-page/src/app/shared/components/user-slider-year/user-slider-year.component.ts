@@ -16,21 +16,23 @@ export class UserSliderYearComponent implements OnInit {
 
   numberOfUsers;
   pricePerYear;
-  newValue;
   plans;
 
-  constructor(service: PlansService) {
-    this.plans = service.getUserAndPrice('200');
-    this.numberOfUsers = this.plans.numberOfUsers;
-    this.pricePerYear = this.plans.pricePerYear;
+  constructor(private service: PlansService) {
   }
 
   ngOnInit() {
+    this.defaultValue(event);
   }
 
   showValue(event) {
-    this.newValue = event.value;
-    return this.newValue;
+    this.defaultValue(event);
+  }
+
+  defaultValue(event) {
+    this.plans = this.service.getUserAndPrice(event ? event.value : '0');
+    this.numberOfUsers = this.plans.numberOfUsers;
+    this.pricePerYear = this.plans.pricePerYear;
   }
 
 }
