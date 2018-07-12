@@ -9,7 +9,10 @@ import { PlanComponent } from './plan/plan.component';
 import { UserTypeComponent } from './user-type/user-type.component';
 import { SliderComponent } from './shared/components/slider/slider.component';
 import { UserSliderYearComponent } from './shared/components/user-slider-year/user-slider-year.component';
+import { PlanItemsListComponent } from './shared/components/plan-items-list/plan-items-list.component';
+
 import { PlansService } from './services/plans.service';
+import { UserTypeService } from './services/user-type.service';
 
 
 @NgModule({
@@ -20,13 +23,15 @@ import { PlansService } from './services/plans.service';
     PlanComponent,
     UserTypeComponent,
     SliderComponent,
-    UserSliderYearComponent
+    UserSliderYearComponent,
+    PlanItemsListComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [
-    PlansService
+    PlansService,
+    UserTypeService
   ],
   bootstrap: [AppComponent]
 })
