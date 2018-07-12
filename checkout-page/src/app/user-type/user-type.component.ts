@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PlanItemsListComponent } from '../shared/components/plan-items-list/plan-items-list.component';
+import { UserTypeService } from '../services/user-type.service';
 
 @Component({
   selector: 'app-user-type',
@@ -7,115 +9,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserTypeComponent implements OnInit {
 
-  startupList = [
-    {
-      info: '5 Project Rooms'
-    },
-    {
-      info: 'xGB Storage'
-    },
-    {
-      info: 'Visual Thinking Tools'
-    },
-    {
-      info: 'Collaboration Tools'
-    },
-    {
-      info: 'Self-Service Support'
-    },
-    {
-      info: '-'
-    },
-    {
-      info: '-'
-    },
-    {
-      info: '-'
-    },
-    {
-      info: '-'
-    },
-    {
-      info: '-'
-    },
-    {
-      info: '-'
-    }
-  ];
+  startupPlan;
+  startupTitle;
+  startupList;
+  startupDescription;
+  businessPlan;
+  businessTitle;
+  businessList;
+  businessDescription;
+  enterprisePlan;
+  enterpriseTitle;
+  enterpriseList;
+  enterpriseDescription;
 
-  businessList = [
-    {
-      info: '5 Project Rooms'
-    },
-    {
-      info: 'xGB Storage'
-    },
-    {
-      info: 'Visual Thinking Tools'
-    },
-    {
-      info: 'Collaboration Tools'
-    },
-    {
-      info: 'Priority Support'
-    },
-    {
-      info: 'Larger Team Sizes'
-    },
-    {
-      info: 'Custom Templates'
-    },
-    {
-      info: 'Guest Accounts'
-    },
-    {
-      info: '-'
-    },
-    {
-      info: '-'
-    },
-    {
-      info: '-'
-    }
-  ];
+  constructor(private service: UserTypeService) {
+    this.startupPlan = service.getStartupPlan();
+    this.startupTitle = this.startupPlan.title;
+    this.startupList = this.startupPlan.items;
+    this.startupDescription = this.startupPlan.description;
 
-  enterpriseList = [
-    {
-      info: 'Unlimited Rooms'
-    },
-    {
-      info: 'Unlimited Storage'
-    },
-    {
-      info: 'Visual Thinking Tools'
-    },
-    {
-      info: 'Collaboration Tools'
-    },
-    {
-      info: 'On-Call Customer Success Manager'
-    },
-    {
-      info: 'Multiple Teams'
-    },
-    {
-      info: 'Custom Templates'
-    },
-    {
-      info: 'Guest Accounts'
-    },
-    {
-      info: 'Enterprise-Grade Security'
-    },
-    {
-      info: 'Admin Dashboard & Analytics'
-    },
-    {
-      info: 'Single Sign-On SAML Integration'
-    }
-  ];
+    this.businessPlan = service.getBusinessPlan();
+    this.businessTitle = this.businessPlan.title;
+    this.businessList = this.businessPlan.items;
+    this.businessDescription = this.businessPlan.description;
 
-  constructor() { }
+    this.enterprisePlan = service.getEnterprisePlan();
+    this.enterpriseTitle = this.enterprisePlan.title;
+    this.enterpriseList = this.enterprisePlan.items;
+    this.enterpriseDescription = this.enterprisePlan.description;
+  }
 
   ngOnInit() {
   }
