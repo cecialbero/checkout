@@ -2,12 +2,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   font-size: 18px;
   text-transform: uppercase;
   min-height: 34px;
   min-width: 210px;
   border-radius: $border-radius;
   border: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .btn-primary {
