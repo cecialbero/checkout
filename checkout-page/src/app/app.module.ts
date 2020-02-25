@@ -11,6 +11,7 @@ import { SliderComponent } from './shared/components/slider/slider.component';
 import { UserSliderYearComponent } from './shared/components/user-slider-year/user-slider-year.component';
 import { PlanItemsListComponent } from './shared/components/plan-items-list/plan-items-list.component';
 
+// Services
 import { PlansService } from './services/plans.service';
 import { UserTypeService } from './services/user-type.service';
 

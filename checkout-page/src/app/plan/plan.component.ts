@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { UserSliderYearComponent } from '../shared/components/user-slider-year/user-slider-year.component';
 
 @Component({
   selector: 'app-plan',

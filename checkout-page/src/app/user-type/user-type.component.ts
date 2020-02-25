@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { PlanItemsListComponent } from '../shared/components/plan-items-list/plan-items-list.component';
 import { UserTypeService } from '../services/user-type.service';
 
 @Component({
