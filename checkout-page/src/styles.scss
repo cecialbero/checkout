@@ -1,1 +1,270 @@
-@import 'app/app.component.scss';
+@font-face {
+    font-family: 'proxima_novalight';
+    src: url('/assets/fonts/proximanova-light.woff2') format('woff2'),
+         url('/assets/fonts/proximanova-light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_nova_rgregular';
+  src: url('/assets/fonts/proximanova-regular.ttf'),
+      url('/assets/fonts/proximanova-regular.woff2') format('woff2'),
+      url('/assets/fonts/proximanova-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_novasemibold';
+  src: url("/assets/fonts/proximanova-semibold.ttf"),
+      url("/assets/fonts/proximanova-semibold.woff2") format('woff2'),
+      url("/assets/fonts/proximanova-semibold.woff") format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'proxima_nova_rgbold';
+    src: url('/assets/fonts/proximanova-bold.woff2') format('woff2'),
+         url('/assets/fonts/proximanova-bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@import 'assets/scss/variable.scss';
+@import 'assets/scss/utils.scss';
+@import 'assets/scss/text.scss';
+@import 'assets/scss/button.scss';
+@import 'assets/scss/grid.scss';
+
+/*Reset Styles*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+body {
+  background-color: #F4F4F4;
+  font-family: 'proxima_nova_rgregular';
+  color: $txt-color;
+}
+
+a {
+  color: $txt-color;
+  border-bottom: 1px dotted $txt-color;
+  padding-bottom: 1px;
+
+  &:hover {
+    color: $light-txt-color;
+    border-bottom: 1px dotted $light-txt-color;
+  }
+}
+
+p {
+  a {
+    color: $light-txt-color;
+    border-bottom: 1px dotted $light-txt-color;
+
+    &:hover {
+      color: $txt-color;
+      border-bottom: 1px dotted $txt-color;
+    }
+  }
+}
+
+li {
+  list-style: none;
+}
+/*End Reset Styles*/
+
+.wrapper {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto $gutter*3 auto;
+  background-color: #FFF;
+  border-radius: $border-radius;
+  padding-top: $gutter*2;
+  padding-bottom: 40px;
+  overflow: hidden;
+}
+
+/*Current Plan*/
+.current-plan-info {
+
+  @media (min-width: 768px) {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+
+  .col + .col {
+    text-align: center;
+
+    @media (min-width: 768px) {
+      text-align: right;
+    }
+  }
+
+  > div {
+    display: inline-block;
+    width: 100%;
+    padding: 20px 0;
+    border-top: 1px solid #EDEDED;
+    border-bottom: 1px solid #EDEDED;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      display: flex;
+      align-items: flex-end;
+      text-align: inherit;
+    }
+  }
+
+  p {
+    line-height: 20px;
+    margin: 0;
+  }
+}
+
+.count-down-txt {
+  font-size: 18px;
+}
+/*End Current Plan*/
+
+/*Plan Info*/
+.plan-info {
+  text-align: center;
+
+  hr {
+    width: 40px;
+    height: 2px;
+    background-color: #CCC;
+    border: none;
+    margin: $gutter*2 auto $gutter auto;
+  }
+
+  ul {
+    margin-top: $gutter;
+
+    li {
+      font-family: 'proxima_novasemibold';
+      font-size: 16px;
+      margin-top: $gutter;
+    }
+  }
+}
+
+.choose-plan {
+  font-family: 'proxima_novasemibold';
+  font-size: 13px;
+  margin-bottom: $gutter - 5px;
+}
+
+.dot {
+  display: block;
+  color: #D8D8D8;
+  line-height: 5px;
+  margin-bottom: 9px;
+}
+/*End Plan Info*/
+
+/*Slider Articles*/
+.slider {
+  margin: 30px $gutter/2;
+
+  article {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    min-height: 340px;
+    padding: $gutter 20px;
+    border: 2px solid $secondary-color;
+
+    @media (min-width: 560px) {
+      width: 80%;
+    }
+
+    @media (min-width: 768px) {
+      width: 33%;
+      margin-right: 0;
+      margin-left: -6px;
+      padding: $gutter 5px;
+    }
+
+  }
+
+  article:nth-of-type(2) {
+    background-color: $secondary-color;
+    color: $invert-txt-color;
+
+    .btn-primary {
+      margin-top: 56px;
+    }
+
+    @media (min-width: 960px) {
+      width: 35%;
+      min-height: 370px;
+    }
+  }
+
+  .slider-big-txt {
+    @extend .h1;
+    @extend .semi-bold;
+    margin-bottom: 0;
+    text-transform: none;
+  }
+
+  label {
+    font-size: 16px;
+    font-family: 'proxima_novasemibold';
+
+    span {
+      font-size: 14px;
+    }
+
+    &.slider-big-txt {
+      span {
+        font-size: 16px;
+      }
+    }
+  }
+
+  hr {
+    width: 80px;
+    height: 1px;
+    background-color: #B7B7B7;
+    border: none;
+    margin: $gutter - 10 auto;
+  }
+
+  .slider-small-txt {
+    font-size: 16px;
+    line-height: 10px;
+    margin-bottom: 0;
+  }
+
+  .month-year {
+    margin: $gutter 0 $gutter 25%;
+
+    @media (min-width: 560px) {
+
+    }
+
+    > div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 7px;
+    }
+
+    input {
+      margin-right: 8px;
+    }
+  }
+
+  .btn-group {
+    margin-top: 70px;
+  }
+}
+/*End Slider Article*/
