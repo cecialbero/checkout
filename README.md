@@ -1,6 +1,6 @@
 # Landing Page
 
-Welcome! This is a demo landing page done with Angular 6.
+Welcome! This is a demo landing page done with Angular 8.
 
 ## Development server
 
