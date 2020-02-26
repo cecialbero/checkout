@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserTypeService } from '../services/user-type.service';
+import { UserTypeService } from '../../services/user-type.service';
 
 @Component({
   selector: 'app-user-type',
