@@ -1,5 +1,4 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
-import { SliderComponent } from '../slider/slider.component';
+import { Component, OnInit, Input } from '@angular/core';
 import { PlansService } from '../../../services/plans.service';
 
 @Component({
