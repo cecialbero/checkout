@@ -14,6 +14,8 @@ import { PlanItemsListComponent } from './shared/components/plan-items-list/plan
 // Services
 import { PlansService } from './services/plans.service';
 import { UserTypeService } from './services/user-type.service';
+import { HomeComponent } from './home/home.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -25,10 +27,12 @@ import { UserTypeService } from './services/user-type.service';
     UserTypeComponent,
     SliderComponent,
     UserSliderYearComponent,
-    PlanItemsListComponent
+    PlanItemsListComponent,
+    HomeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [
     PlansService,
