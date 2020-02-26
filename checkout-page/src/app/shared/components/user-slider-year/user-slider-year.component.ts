@@ -14,9 +14,9 @@ export class UserSliderYearComponent implements OnInit {
   @Input() minValue: number;
   @Input() maxValue: number;
 
-  numberOfUsers;
-  pricePerYear;
-  plans;
+  numberOfUsers: number;
+  pricePerYear: number;
+  plans: any;
 
   constructor(private service: PlansService) {
   }

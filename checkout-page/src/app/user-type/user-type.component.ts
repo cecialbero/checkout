@@ -8,18 +8,18 @@ import { UserTypeService } from '../services/user-type.service';
 })
 export class UserTypeComponent implements OnInit {
 
-  startupPlan;
-  startupTitle;
-  startupList;
-  startupDescription;
-  businessPlan;
-  businessTitle;
-  businessList;
-  businessDescription;
-  enterprisePlan;
-  enterpriseTitle;
-  enterpriseList;
-  enterpriseDescription;
+  startupPlan: any;
+  startupTitle: string;
+  startupList: any;
+  startupDescription: any;
+  businessPlan: any;
+  businessTitle: string;
+  businessList: any;
+  businessDescription: any;
+  enterprisePlan: any;
+  enterpriseTitle: string;
+  enterpriseList: any;
+  enterpriseDescription: any;
 
   constructor(private service: UserTypeService) {
     this.startupPlan = service.getStartupPlan();
