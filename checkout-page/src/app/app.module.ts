@@ -1,12 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { MainInfoComponent } from './main-info/main-info.component';
-import { PlanComponent } from './plan/plan.component';
-import { UserTypeComponent } from './user-type/user-type.component';
+import { MainInfoComponent } from './home/main-info/main-info.component';
+import { PlanComponent } from './home/plan/plan.component';
+import { UserTypeComponent } from './home/user-type/user-type.component';
+
+// Components
+import { HeaderComponent } from './shared/components/header/header.component';
 import { SliderComponent } from './shared/components/slider/slider.component';
 import { UserSliderYearComponent } from './shared/components/user-slider-year/user-slider-year.component';
 import { PlanItemsListComponent } from './shared/components/plan-items-list/plan-items-list.component';
