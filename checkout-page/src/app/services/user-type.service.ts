@@ -87,7 +87,7 @@ export class UserTypeService {
 
   enterprisePlan: Object = {
     title: 'Enterprise',
-    description: ['Business that successfully integrated MURAL and is ready to deploy at scale', 'Design-led Fortune 1000 Company'],
+    description: ['Business that successfully integrated BoxLab and is ready to deploy at scale', 'Design-led Fortune 1000 Company'],
     items: [
       {
         info: 'Unlimited Rooms'
