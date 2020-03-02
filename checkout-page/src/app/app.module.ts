@@ -17,6 +17,7 @@ import { PlansService } from './services/plans.service';
 import { UserTypeService } from './services/user-type.service';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { AppRoutingModule } from './app-routing.module';
     SliderComponent,
     UserSliderYearComponent,
     PlanItemsListComponent,
-    HomeComponent
+    HomeComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,
