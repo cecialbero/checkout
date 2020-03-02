@@ -37,6 +37,7 @@
 @import 'assets/scss/text.scss';
 @import 'assets/scss/button.scss';
 @import 'assets/scss/grid.scss';
+@import 'assets/scss/form.scss';
 
 /*Reset Styles*/
 * {
@@ -78,6 +79,14 @@ p {
 li {
   list-style: none;
 }
+
+hr {
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  border: none;
+  margin: 30px 0;
+}
 /*End Reset Styles*/
 
 .wrapper {
@@ -86,8 +95,7 @@ li {
   margin: 0 auto $gutter*3 auto;
   background-color: #FFF;
   border-radius: $border-radius;
-  padding-top: $gutter*2;
-  padding-bottom: 40px;
+  padding: $gutter*2 15px 40px;
   overflow: hidden;
 }
 
@@ -140,8 +148,6 @@ li {
   hr {
     width: 40px;
     height: 2px;
-    background-color: #CCC;
-    border: none;
     margin: $gutter*2 auto $gutter auto;
   }
 
@@ -172,7 +178,7 @@ li {
 
 /*Slider Articles*/
 .slider {
-  margin: 30px $gutter/2;
+  margin: 30px 0;
 
   article {
     display: inline-block;
@@ -233,10 +239,8 @@ li {
 
   hr {
     width: 80px;
-    height: 1px;
-    background-color: #B7B7B7;
-    border: none;
     margin: $gutter - 10 auto;
+    background-color: #B7B7B7;
   }
 
   .slider-small-txt {

@@ -1,0 +1,27 @@
+label {
+  @extend .h4;
+  text-transform: capitalize;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  background-color: #FFF;
+  height: 33px;
+  padding: 0 5px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #393939;
+  margin-bottom: 15px;
+}
+
+textarea {
+  height: 100px;
+  padding: 5px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
