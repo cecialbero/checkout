@@ -23,4 +23,7 @@ export class ContactUsComponent implements OnInit {
     this.phone = event.target.value;
   }
 
+  sendData() {
+  }
+
 }

@@ -5,7 +5,7 @@ label {
   margin-bottom: 5px;
 }
 
-input, textarea {
+input:not([type='range']):not([type='radio']), textarea {
   background-color: #FFF;
   height: 33px;
   padding: 0 5px;

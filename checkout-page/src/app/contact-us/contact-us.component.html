@@ -26,21 +26,21 @@
       <form>
         <div class="form-group">
           <label>Name:</label>
-          <input type="text" (input)="inputsName($event)" [placeholder]="'This field is required.'">
+          <input type="text" (input)="inputsName($event)">
         </div>
         <div class="form-group">
           <label>Phone:</label>
-          <input type="tel" (input)="inputsPhone($event)" [placeholder]="'This field is required.'">
+          <input type="tel" (input)="inputsPhone($event)">
         </div>
         <div class="form-group">
           <label>Subject:</label>
-          <!-- select -->
+          <app-select></app-select>
         </div>
         <div class="form-group">
           <label>Messages:</label>
           <textarea></textarea>
         </div>
-        <button [disabled]="!(name && phone)" class="btn btn-primary">Contact</button>
+        <button [disabled]="!(name && phone)" class="btn btn-primary" (click)="sendData()">Contact</button>
       </form>
     </div>
   </div>

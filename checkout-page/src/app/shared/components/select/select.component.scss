@@ -1,0 +1,42 @@
+:host {
+  position: relative;
+
+  div {
+    background-color: #FFF;
+    height: 33px;
+    padding: 0 5px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #393939;
+    margin-bottom: 15px;
+    cursor: pointer;
+
+    span {
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      display: inline-block;
+      font-weight: 700;
+      transform: rotate(90deg);
+    }
+  }
+
+  ul {
+    position: absolute;
+    top: 33px;
+    left: 0;
+    right: 0;
+    padding: 15px 15px 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+  }
+
+  li {
+    padding-bottom: 10px;
+
+    :hover {
+      color: black;
+    }
+  }
+}

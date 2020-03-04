@@ -11,6 +11,7 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { SliderComponent } from './shared/components/slider/slider.component';
 import { UserSliderYearComponent } from './shared/components/user-slider-year/user-slider-year.component';
 import { PlanItemsListComponent } from './shared/components/plan-items-list/plan-items-list.component';
+import { SelectComponent } from './shared/components/select/select.component';
 
 // Services
 import { PlansService } from './services/plans.service';
@@ -31,7 +32,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     UserSliderYearComponent,
     PlanItemsListComponent,
     HomeComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    SelectComponent
   ],
   imports: [
     BrowserModule,
