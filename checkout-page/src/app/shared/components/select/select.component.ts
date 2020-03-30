@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener  } from '@angular/core';
+import { Component, OnInit, HostListener, Input, ViewChild, ElementRef  } from '@angular/core';
 
 @Component({
   selector: 'app-select',
@@ -6,23 +6,17 @@ import { Component, OnInit, HostListener  } from '@angular/core';
   styleUrls: ['./select.component.scss']
 })
 export class SelectComponent implements OnInit {
+  @ViewChild('select', {static: false}) select: ElementRef;
+  @Input() options: string;
   showOptions = false;
 
-  selectOptionList = [
-    {
-      name: 'Technical Support'
-    },
-    {
-      name: 'Sales'
-    },
-    {
-      name: 'Other'
-    }
-  ];
-
-  @HostListener('click')
-  onClickSelect() {
+  @HostListener('click', ['$event']) onClickSelect(event: any) {
     this.showOptions = !this.showOptions;
+
+    if (event.target.tagName === 'LI') {
+      const liText = event.target.innerText;
+      this.select.nativeElement.innerText = liText;
+    }
   }
 
   constructor() { }

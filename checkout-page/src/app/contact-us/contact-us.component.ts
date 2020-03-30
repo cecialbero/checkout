@@ -10,6 +10,8 @@ export class ContactUsComponent implements OnInit {
   name: string;
   phone: string;
 
+  selectOptions = ['Technical Support', 'Sales', 'Other'];
+
   constructor() { }
 
   ngOnInit(): void {

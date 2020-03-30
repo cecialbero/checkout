@@ -1,4 +1,4 @@
-<div> <span> > </span></div>
+<div #select></div>
 <ul *ngIf="showOptions">
-  <li *ngFor="let selectOption of selectOptionList">{{selectOption.name}}</li>
+  <li *ngFor="let option of options">{{ option }}</li>
 </ul>

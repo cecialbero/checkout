@@ -6,6 +6,10 @@ label {
 }
 
 input:not([type='range']):not([type='radio']), textarea {
+  background-color: #F4F4F4;
+  font-family: 'proxima_nova_rgregular';
+  color: $txt-color;
+  font-size: 16px;
   background-color: #FFF;
   height: 33px;
   padding: 0 5px;
