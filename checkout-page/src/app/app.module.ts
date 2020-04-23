@@ -10,8 +10,6 @@ import { PlansService } from './services/plans.service';
 import { UserTypeService } from './services/user-type.service';
 import { AppRoutingModule } from './app-routing.module';
 
-import { HomeModule } from './home/home.module';
-
 
 @NgModule({
   declarations: [
@@ -20,7 +18,6 @@ import { HomeModule } from './home/home.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HomeModule,
     HeaderModule
   ],
   providers: [
