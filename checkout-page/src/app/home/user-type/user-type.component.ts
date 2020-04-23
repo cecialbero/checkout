@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { UserTypeService } from '../../services/user-type.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { UserTypeService } from '../../services/user-type.service';
   templateUrl: './user-type.component.html',
   styleUrls: ['./user-type.component.scss']
 })
-export class UserTypeComponent implements OnInit {
+export class UserTypeComponent {
 
   startupPlan: any;
   startupTitle: string;
@@ -36,9 +36,6 @@ export class UserTypeComponent implements OnInit {
     this.enterpriseTitle = this.enterprisePlan.title;
     this.enterpriseList = this.enterprisePlan.items;
     this.enterpriseDescription = this.enterprisePlan.description;
-  }
-
-  ngOnInit() {
   }
 
 }

@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-plan',
   templateUrl: './plan.component.html',
   styleUrls: ['./plan.component.scss']
 })
-export class PlanComponent implements OnInit {
+export class PlanComponent {
 
   monthValue = true;
   yearValue = false;
@@ -27,9 +27,6 @@ export class PlanComponent implements OnInit {
   };
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
   onSelectMonth() {
     this.yearValue = false;
