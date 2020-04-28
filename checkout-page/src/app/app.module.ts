@@ -7,7 +7,6 @@ import { HeaderModule } from './shared/components/header/header.module';
 
 // Services
 import { PlansService } from './services/plans.service';
-import { UserTypeService } from './services/user-type.service';
 import { AppRoutingModule } from './app-routing.module';
 
 
@@ -21,8 +20,7 @@ import { AppRoutingModule } from './app-routing.module';
     HeaderModule
   ],
   providers: [
-    PlansService,
-    UserTypeService
+    PlansService
   ],
   bootstrap: [AppComponent]
 })

@@ -6,6 +6,7 @@ import { MainInfoComponent } from './main-info/main-info.component';
 import { PlanComponent } from './plan/plan.component';
 import { UserTypeComponent } from './user-type/user-type.component';
 import { PlanItemsListModule } from '../shared/components/plan-items-list/plan-items-list.module';
+import { UserTypeService } from '../services/user-type.service';
 
 const routes: Routes = [
   { path: '', component: HomeComponent }
@@ -23,6 +24,7 @@ const routes: Routes = [
     PlanItemsListModule,
     RouterModule.forChild(routes)
   ],
-  exports: [PlanItemsListModule]
+  exports: [PlanItemsListModule],
+  providers: [UserTypeService]
 })
 export class HomeModule { }

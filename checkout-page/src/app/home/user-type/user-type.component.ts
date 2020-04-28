@@ -8,34 +8,14 @@ import { UserTypeService } from '../../services/user-type.service';
 })
 export class UserTypeComponent {
 
-  startupPlan: any;
-  startupTitle: string;
-  startupList: any;
-  startupDescription: any;
-  businessPlan: any;
-  businessTitle: string;
-  businessList: any;
-  businessDescription: any;
-  enterprisePlan: any;
-  enterpriseTitle: string;
-  enterpriseList: any;
-  enterpriseDescription: any;
+  public startupPlan: any;
+  public businessPlan: any;
+  public enterprisePlan: any;
 
   constructor(private service: UserTypeService) {
     this.startupPlan = service.getStartupPlan();
-    this.startupTitle = this.startupPlan.title;
-    this.startupList = this.startupPlan.items;
-    this.startupDescription = this.startupPlan.description;
-
     this.businessPlan = service.getBusinessPlan();
-    this.businessTitle = this.businessPlan.title;
-    this.businessList = this.businessPlan.items;
-    this.businessDescription = this.businessPlan.description;
-
     this.enterprisePlan = service.getEnterprisePlan();
-    this.enterpriseTitle = this.enterprisePlan.title;
-    this.enterpriseList = this.enterprisePlan.items;
-    this.enterpriseDescription = this.enterprisePlan.description;
   }
 
 }
