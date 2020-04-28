@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class PlansService {
 
   constructor() { }
 
-  getUserAndPrice(value) {
+  getUserAndPrice(value: string) {
     switch (value) {
       case '200':
       return {
