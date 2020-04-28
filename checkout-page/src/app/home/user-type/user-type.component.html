@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col four">
       <div class="plan-info">
-        <div class="choose-plan">CHOOSE THIS PLAN IF YOU'RE A...</div>
+        <div class="choose-plan">{{ title }}</div>
         <div *ngFor="let description of startupPlan.description">
           <p>{{ description }}</p>
         </div>
@@ -12,7 +12,7 @@
     </div>
     <div class="col four">
       <div class="plan-info">
-        <div class="choose-plan">CHOOSE THIS PLAN IF YOU'RE A...</div>
+        <div class="choose-plan">{{ title }}</div>
         <div *ngFor="let description of businessPlan.description">
           <p>{{ description }}</p>
         </div>
@@ -22,7 +22,7 @@
     </div>
     <div class="col four">
       <div class="plan-info">
-        <div class="choose-plan">CHOOSE THIS PLAN IF YOU'RE A...</div>
+        <div class="choose-plan">{{ title }}</div>
         <div *ngFor="let description of enterprisePlan.description">
           <p>{{ description }}</p>
         </div>
