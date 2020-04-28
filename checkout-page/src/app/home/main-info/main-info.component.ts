@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CurrentPlanService } from '../../services/current-plan.service';
 
 @Component({
   selector: 'app-main-info',
@@ -7,6 +8,10 @@ import { Component } from '@angular/core';
 })
 export class MainInfoComponent {
 
-  constructor() { }
+  public currentPlan: any;
+
+  constructor(service: CurrentPlanService) {
+    this.currentPlan = service.getCurrentPlan();
+  }
 
 }
