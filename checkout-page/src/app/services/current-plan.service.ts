@@ -1,19 +1,14 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CurrentPlanService {
 
-  public currentPlan = {
-    type: 'Free 30 Day Trial',
-    daysLeft: 13,
-    members: 12
-  };
-
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   getCurrentPlan() {
-    return this.currentPlan;
+    return this.http.get('http://localhost:3000/currentPlan');
   }
 }

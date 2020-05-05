@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CurrentPlanService } from '../../services/current-plan.service';
 
 @Component({
@@ -6,12 +6,18 @@ import { CurrentPlanService } from '../../services/current-plan.service';
   templateUrl: './main-info.component.html',
   styleUrls: ['./main-info.component.scss']
 })
-export class MainInfoComponent {
+export class MainInfoComponent implements OnInit {
 
   public currentPlan: any;
 
-  constructor(service: CurrentPlanService) {
-    this.currentPlan = service.getCurrentPlan();
+  constructor(private service: CurrentPlanService) {
+  }
+
+  ngOnInit() {
+    this.service.getCurrentPlan()
+    .subscribe( data => {
+      this.currentPlan = data;
+    });
   }
 
 }

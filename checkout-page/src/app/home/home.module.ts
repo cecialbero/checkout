@@ -10,6 +10,7 @@ import { UserTypeComponent } from './user-type/user-type.component';
 
 /*Shared Components*/
 import { PlanItemsListModule } from '../shared/components/plan-items-list/plan-items-list.module';
+import { UserSliderYearModule } from '../shared/components/user-slider-year/user-slider-year.module';
 
 /*Services*/
 import { UserTypeService } from '../services/user-type.service';
@@ -29,6 +30,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     PlanItemsListModule,
+    UserSliderYearModule,
     RouterModule.forChild(routes)
   ],
   exports: [PlanItemsListModule],

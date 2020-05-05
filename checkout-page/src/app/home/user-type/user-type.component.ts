@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UserTypeService } from '../../services/user-type.service';
 
 @Component({
@@ -6,17 +6,22 @@ import { UserTypeService } from '../../services/user-type.service';
   templateUrl: './user-type.component.html',
   styleUrls: ['./user-type.component.scss']
 })
-export class UserTypeComponent {
+export class UserTypeComponent implements OnInit {
 
   public startupPlan: any;
   public businessPlan: any;
   public enterprisePlan: any;
   public title = 'CHOOSE THIS PLAN IF YOU\RE A...';
 
-  constructor(private service: UserTypeService) {
-    this.startupPlan = service.getStartupPlan();
-    this.businessPlan = service.getBusinessPlan();
-    this.enterprisePlan = service.getEnterprisePlan();
+  constructor(private service: UserTypeService) { }
+
+  ngOnInit() {
+    this.service.getPlan()
+    .subscribe( data => {
+      this.startupPlan = data[0];
+      this.businessPlan = data[1];
+      this.enterprisePlan = data[2];
+    });
   }
 
 }

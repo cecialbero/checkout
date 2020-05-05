@@ -6,6 +6,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod",
+    "json:server": "json-server --watch db.json",
+    "start:json:server": "concurrently — kill-others \"npm run json:server\" \"npm run start\"",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
