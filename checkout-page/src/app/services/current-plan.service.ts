@@ -5,10 +5,9 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CurrentPlanService {
-
   constructor(private http: HttpClient) { }
 
-  getCurrentPlan() {
-    return this.http.get('http://localhost:3000/currentPlan');
+  public getCurrentPlan() {
+    return this.http.get('http://localhost:3000/current');
   }
 }

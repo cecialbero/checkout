@@ -8,19 +8,20 @@ import { UserTypeService } from '../../services/user-type.service';
 })
 export class UserTypeComponent implements OnInit {
 
-  public startupPlan: any;
-  public businessPlan: any;
-  public enterprisePlan: any;
+  public startupPlan: any = {};
+  public businessPlan: any = {};
+  public enterprisePlan: any = {};
   public title = 'CHOOSE THIS PLAN IF YOU\RE A...';
 
   constructor(private service: UserTypeService) { }
 
   ngOnInit() {
-    this.service.getPlan()
-    .subscribe( data => {
-      this.startupPlan = data[0];
-      this.businessPlan = data[1];
-      this.enterprisePlan = data[2];
+    this.service.getPlan().subscribe( (data: any) => {
+      if (data) {
+        this.startupPlan = data[0];
+        this.businessPlan = data[1];
+        this.enterprisePlan = data[2];
+      }
     });
   }
 

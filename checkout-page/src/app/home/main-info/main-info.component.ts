@@ -8,15 +8,17 @@ import { CurrentPlanService } from '../../services/current-plan.service';
 })
 export class MainInfoComponent implements OnInit {
 
-  public currentPlan: any;
+  public currentPlan: any = {};
 
-  constructor(private service: CurrentPlanService) {
+  constructor(public service: CurrentPlanService) {
   }
 
   ngOnInit() {
     this.service.getCurrentPlan()
-    .subscribe( data => {
-      this.currentPlan = data;
+    .subscribe((data: any) => {
+      if (data) {
+        this.currentPlan = data;
+      }
     });
   }
 
