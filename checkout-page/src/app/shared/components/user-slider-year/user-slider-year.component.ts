@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { PlansService } from '../../../services/plans.service';
+import { UsersPriceService } from '../../../services/users-price.service';
 
 @Component({
   selector: 'app-user-slider-year',
@@ -17,7 +17,7 @@ export class UserSliderYearComponent implements OnInit {
   pricePerYear: number;
   plans: any;
 
-  constructor(private service: PlansService) {
+  constructor(private service: UsersPriceService) {
   }
 
   ngOnInit() {

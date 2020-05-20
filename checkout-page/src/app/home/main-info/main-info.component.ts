@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CurrentPlanService } from '../../services/current-plan.service';
+import { CurrentPlan } from '../../model/current-plan';
 
 @Component({
   selector: 'app-main-info',
@@ -8,7 +9,7 @@ import { CurrentPlanService } from '../../services/current-plan.service';
 })
 export class MainInfoComponent implements OnInit {
 
-  public currentPlan: any = {};
+  currentPlan: CurrentPlan;
 
   constructor(public service: CurrentPlanService) {
   }

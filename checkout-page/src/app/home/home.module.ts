@@ -13,7 +13,7 @@ import { PlanItemsListModule } from '../shared/components/plan-items-list/plan-i
 import { UserSliderYearModule } from '../shared/components/user-slider-year/user-slider-year.module';
 
 /*Services*/
-import { UserTypeService } from '../services/user-type.service';
+import { PlanService } from '../services/plan.service';
 import { CurrentPlanService } from '../services/current-plan.service';
 
 const routes: Routes = [
@@ -35,7 +35,7 @@ const routes: Routes = [
   ],
   exports: [PlanItemsListModule],
   providers: [
-    UserTypeService,
+    PlanService,
     CurrentPlanService
   ]
 })

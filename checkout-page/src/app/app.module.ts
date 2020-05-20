@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { HeaderModule } from './shared/components/header/header.module';
 
 // Services
-import { PlansService } from './services/plans.service';
 import { AppRoutingModule } from './app-routing.module';
 
 
@@ -21,9 +20,7 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule,
     HeaderModule
   ],
-  providers: [
-    PlansService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

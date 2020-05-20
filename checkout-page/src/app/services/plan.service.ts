@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class UserTypeService {
+export class PlanService {
 
   constructor(private http: HttpClient) { }
 

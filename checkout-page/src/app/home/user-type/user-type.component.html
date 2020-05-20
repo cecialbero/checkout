@@ -7,7 +7,7 @@
           <p>{{ description }}</p>
         </div>
         <hr>
-        <app-plan-items-list planItemTitle="{{ startupPlan.title }}" [planItemList]="startupPlan.items"></app-plan-items-list>
+        <app-plan-items-list planItemTitle="{{ startupPlan.name }}" [planItemList]="startupPlan.items"></app-plan-items-list>
       </div>
     </div>
     <div class="col four">
@@ -17,7 +17,7 @@
           <p>{{ description }}</p>
         </div>
         <hr>
-        <app-plan-items-list planItemTitle="{{ businessPlan.title }}" [planItemList]="businessPlan.items"></app-plan-items-list>
+        <app-plan-items-list planItemTitle="{{ businessPlan.name }}" [planItemList]="businessPlan.items"></app-plan-items-list>
       </div>
     </div>
     <div class="col four">
@@ -27,7 +27,7 @@
           <p>{{ description }}</p>
         </div>
         <hr>
-        <app-plan-items-list planItemTitle="{{ enterprisePlan.title }}" [planItemList]="enterprisePlan.items"></app-plan-items-list>
+        <app-plan-items-list planItemTitle="{{ enterprisePlan.name }}" [planItemList]="enterprisePlan.items"></app-plan-items-list>
       </div>
     </div>
   </div>

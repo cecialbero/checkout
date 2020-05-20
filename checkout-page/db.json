@@ -122,5 +122,14 @@
         }
       ]
     }
-  ]
+  ],
+  "company": {
+    "phone": "800 4759 5020",
+    "daysOpen": [
+      {
+        "week": "8am to 8pm",
+        "weekend": "8am to 4pm"
+      }
+    ]
+  }
 }
