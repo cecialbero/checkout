@@ -1,33 +1,16 @@
 <section>
   <div class="row">
-    <div class="col four">
+    <div class="col four" *ngFor="let plan of plans">
       <div class="plan-info">
         <div class="choose-plan">{{ title }}</div>
-        <div *ngFor="let description of startupPlan.description">
+        <div *ngFor="let description of plan.description">
           <p>{{ description }}</p>
         </div>
         <hr>
-        <app-plan-items-list planItemTitle="{{ startupPlan.name }}" [planItemList]="startupPlan.items"></app-plan-items-list>
-      </div>
-    </div>
-    <div class="col four">
-      <div class="plan-info">
-        <div class="choose-plan">{{ title }}</div>
-        <div *ngFor="let description of businessPlan.description">
-          <p>{{ description }}</p>
-        </div>
-        <hr>
-        <app-plan-items-list planItemTitle="{{ businessPlan.name }}" [planItemList]="businessPlan.items"></app-plan-items-list>
-      </div>
-    </div>
-    <div class="col four">
-      <div class="plan-info">
-        <div class="choose-plan">{{ title }}</div>
-        <div *ngFor="let description of enterprisePlan.description">
-          <p>{{ description }}</p>
-        </div>
-        <hr>
-        <app-plan-items-list planItemTitle="{{ enterprisePlan.name }}" [planItemList]="enterprisePlan.items"></app-plan-items-list>
+        <h4 class="brand-color bold">{{ plan.name }} Includes:</h4>
+        <ul>
+          <li *ngFor="let item of plan.items">{{ item }}</li>
+        </ul>
       </div>
     </div>
   </div>

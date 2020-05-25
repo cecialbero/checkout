@@ -9,7 +9,6 @@ import { PlanComponent } from './plan/plan.component';
 import { UserTypeComponent } from './user-type/user-type.component';
 
 /*Shared Components*/
-import { PlanItemsListModule } from '../shared/components/plan-items-list/plan-items-list.module';
 import { UserSliderYearModule } from '../shared/components/user-slider-year/user-slider-year.module';
 
 /*Services*/
@@ -29,11 +28,10 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
-    PlanItemsListModule,
     UserSliderYearModule,
     RouterModule.forChild(routes)
   ],
-  exports: [PlanItemsListModule],
+  exports: [],
   providers: [
     PlanService,
     CurrentPlanService

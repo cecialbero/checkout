@@ -9,19 +9,15 @@ import { Plan } from '../../model/plans';
 })
 export class UserTypeComponent implements OnInit {
 
-  startupPlan: Plan;
-  businessPlan: Plan;
-  enterprisePlan: Plan;
-  public title = 'CHOOSE THIS PLAN IF YOU\RE A...';
+  plans: Plan[];
+  public title = 'CHOOSE THIS PLAN IF YOU\'RE A...';
 
   constructor(private service: PlanService) { }
 
   ngOnInit() {
     this.service.getPlan().subscribe( (data: any) => {
       if (data) {
-        this.startupPlan = data.find(plan => plan.name === 'Startup');
-        this.businessPlan = data.find(plan => plan.name === 'Business');
-        this.enterprisePlan = data.find(plan => plan.name === 'Enterprise');
+        this.plans = data;
       }
     });
   }
