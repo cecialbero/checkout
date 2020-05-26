@@ -58,12 +58,11 @@
     }
   ],
   "company": {
-    "phone": "800 4759 5020",
-    "daysOpen": [
-      {
-        "week": "8am to 8pm",
-        "weekend": "8am to 4pm"
-      }
-    ]
+    "phone": "1 800 4759 5020",
+    "email": "info@boxlab.co",
+    "daysOpen": {
+      "week": "8am to 8pm",
+      "weekend": "8am to 4pm"
+    }
   }
 }
