@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CompanyInfo } from '../model/company-info';
+import { CompanyInfoService } from '../services/company-info.service';
 
 @Component({
   selector: 'app-contact-us',
@@ -9,12 +11,19 @@ export class ContactUsComponent implements OnInit {
 
   name: string;
   phone: string;
+  public company: CompanyInfo;
 
   selectOptions = ['Technical Support', 'Sales', 'Other'];
 
-  constructor() { }
+  constructor(public companyService: CompanyInfoService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.companyService.getCompanyInfo()
+      .subscribe((data: any) => {
+        if (data) {
+          this.company = data;
+        }
+      });
   }
 
   inputsName(event: any) {
