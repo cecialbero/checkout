@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CompanyInfo } from '../model/company-info';
 import { CompanyInfoService } from '../services/company-info.service';
+import { CompanyInfo } from '../model/company-info';
 
 @Component({
   selector: 'app-contact-us',
@@ -11,7 +11,7 @@ export class ContactUsComponent implements OnInit {
 
   name: string;
   phone: string;
-  public company: CompanyInfo;
+  public company = <CompanyInfo>{};
 
   selectOptions = ['Technical Support', 'Sales', 'Other'];
 

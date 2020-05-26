@@ -1,13 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { CompanyInfo } from '../model/company-info';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/Operators';
-
-interface CompanyInfo {
-  phone: number;
-  email: string;
-  daysOpen: {};
-}
 
 @Injectable({
   providedIn: 'root'

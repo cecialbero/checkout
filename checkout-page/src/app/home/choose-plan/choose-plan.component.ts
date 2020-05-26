@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CompanyInfoService } from '../../services/company-info.service';
+import { CompanyInfo } from '../../model/company-info';
 
 @Component({
   selector: 'app-choose-plan',
@@ -8,7 +9,7 @@ import { CompanyInfoService } from '../../services/company-info.service';
 })
 export class ChoosePlanComponent implements OnInit {
 
-  public company = <any>{};
+  public company = <CompanyInfo>{};
 
   monthValue = true;
   yearValue = false;
