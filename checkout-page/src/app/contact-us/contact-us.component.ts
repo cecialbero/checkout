@@ -12,6 +12,7 @@ export class ContactUsComponent implements OnInit {
   name: string;
   phone: string;
   public company = <CompanyInfo>{};
+  public daysOpen = <any>{};
 
   selectOptions = ['Technical Support', 'Sales', 'Other'];
 
@@ -19,9 +20,10 @@ export class ContactUsComponent implements OnInit {
 
   ngOnInit() {
     this.companyService.getCompanyInfo()
-      .subscribe((data: any) => {
+      .subscribe((data) => {
         if (data) {
           this.company = data;
+          this.daysOpen = this.company['daysOpen'];
         }
       });
   }
