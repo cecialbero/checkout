@@ -1,13 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Plan } from '../model/plan';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/Operators';
-
-interface Plan {
-  name: string;
-  description: Array<string>;
-  items: Array<string>;
-}
 
 @Injectable({
   providedIn: 'root'

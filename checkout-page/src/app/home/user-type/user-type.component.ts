@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PlanService } from '../../services/plan.service';
+import { Plan } from '../../model/plan';
 
 @Component({
   selector: 'app-user-type',
@@ -8,13 +9,13 @@ import { PlanService } from '../../services/plan.service';
 })
 export class UserTypeComponent implements OnInit {
 
-  public plans = [];
+  public plans: Plan[];
   public title = 'CHOOSE THIS PLAN IF YOU\'RE A...';
 
   constructor(private service: PlanService) { }
 
   ngOnInit() {
-    this.service.getPlan().subscribe( (data: any) => {
+    this.service.getPlan().subscribe( (data) => {
       if (data) {
         this.plans = data;
       }
