@@ -1,0 +1,68 @@
+<section>
+  <div class="row">
+    <div class="col twelve">
+      <h2 class="center-txt">Choose a plan that works best for your needs and your team size.<br>And leave some room to grow!</h2>
+
+      <div class="slider center-txt">
+        <!-- First Article -->
+        <article>
+          <div class="slider-big-txt">Startup</div>
+          <hr>
+          <div class="slider-big-txt">{{startup.users}}</div>
+          <span class="slider-small-txt">users</span>
+          <hr>
+          <div class="month-year">
+            <div>
+              <input
+              type="radio"
+              id="month"
+              (ngModel)="monthValue"
+              [checked]="monthValue"
+              (click)="onSelectMonth()">
+              <label for="month "[ngClass]="{'slider-big-txt' : monthValue}">${{startup.month}}<span>/ month</span></label>
+            </div>
+
+            <div>
+              <input
+              type="radio"
+              id="year"
+              (ngModel)="yearValue"
+              [checked]="yearValue"
+              (click)="onSelectYear()">
+              <label for="year" [ngClass]="{'slider-big-txt' : yearValue}" >${{startup.year}}<span>/ year</span></label>
+            </div>
+          </div>
+
+          <button class="btn btn-secondary center">Choose this plan</button>
+        </article>
+
+        <!-- Second Article -->
+        <article>
+          <div class="slider-big-txt">Business</div>
+          <hr>
+          <app-user-slider-year
+          maxValue="800"
+          minValue="200"
+          step="200"
+          initialValue="400"></app-user-slider-year>
+          <button class="btn btn-primary center">Choose this plan</button>
+        </article>
+
+        <!-- Third Article -->
+        <article>
+          <div class="slider-big-txt">Enterprise</div>
+          <hr>
+          <div class="slider-big-txt">{{enterprise.users}}+</div>
+          <span class="slider-small-txt">users</span>
+          <hr>
+          <div class="btn-group">
+            <button class="btn btn-outline center">Learn more</button>
+            <button class="btn btn-secondary center" routerLink="contact-us">Contact Us</button>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="center-txt">Questions? <a class="bold" href="mailto:{{ company.email }}">Send us an email</a> or give us a call at <a class="bold" href="#">+ {{ company.phone }}</a></h3>
+    </div>
+  </div>
+</section>
