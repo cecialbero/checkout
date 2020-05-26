@@ -34,7 +34,7 @@ export class ChoosePlanComponent implements OnInit {
 
   ngOnInit() {
     this.companyService.getCompanyInfo()
-    .subscribe((data: any) => {
+    .subscribe((data) => {
       if (data) {
         this.company = data;
       }
