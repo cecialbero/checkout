@@ -1,13 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { CurrentPlan } from '../model/current-plan';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/Operators';
-
-interface CurrentPlan {
-  type: string;
-  daysLeft: number;
-  members: number;
-}
 
 @Injectable({
   providedIn: 'root'
