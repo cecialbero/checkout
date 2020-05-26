@@ -4,8 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 /*Components*/
 import { HomeComponent } from './home.component';
-import { MainInfoComponent } from './main-info/main-info.component';
-import { PlanComponent } from './plan/plan.component';
+import { ChoosePlanComponent } from './choose-plan/choose-plan.component';
+import { CurrentPlanComponent } from './current-plan/current-plan.component';
 import { UserTypeComponent } from './user-type/user-type.component';
 
 /*Shared Components*/
@@ -22,8 +22,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     HomeComponent,
-    MainInfoComponent,
-    PlanComponent,
+    ChoosePlanComponent,
+    CurrentPlanComponent,
     UserTypeComponent
   ],
   imports: [
