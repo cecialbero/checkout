@@ -9,7 +9,6 @@ import { HeaderModule } from './shared/components/header/header.module';
 // Services
 import { AppRoutingModule } from './app-routing.module';
 
-
 @NgModule({
   declarations: [
     AppComponent
