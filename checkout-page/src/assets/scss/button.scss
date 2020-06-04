@@ -1,12 +1,10 @@
 .btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: inline-block;
   cursor: pointer;
+  box-sizing: border-box;
+  padding: 7px 20px;
   font-size: 18px;
   text-transform: uppercase;
-  min-height: 34px;
-  min-width: 210px;
   border-radius: $border-radius;
   border: none;
 
@@ -36,12 +34,12 @@
 
 .btn-outline {
   background-color: #FFF;
-  height: 30px;
-  width: 206px;
   border: 2px solid $secondary-color;
   color: $txt-color;
+  padding: 5px 20px;
 }
 
 .btn + .btn {
   margin-top: 10px;
+  margin-left: 15px;
 }
