@@ -4,7 +4,6 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 h1, .h1 {
-  font-family: 'proxima_novalight';
   font-size: 32px;
   font-weight: 300;
   text-transform: uppercase;
@@ -19,8 +18,7 @@ h2 {
 }
 
 h3, .h3 {
-  font-family: 'proxima_novasemibold';
-  font-weight: 600;
+  font-weight: 500;
   font-size: 20px;
   margin-bottom: 9px;
 }
@@ -40,9 +38,9 @@ p {
 }
 
 .semi-bold {
-  font-family: 'proxima_novasemibold';
+  font-weight: 500;
 }
 
 .bold, b {
-  font-family: 'proxima_nova_rgbold';
+  font-weight: 700;
 }
