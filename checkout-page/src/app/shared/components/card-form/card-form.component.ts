@@ -1,4 +1,4 @@
-import { Component, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
@@ -6,28 +6,32 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   templateUrl: './card-form.component.html',
   styleUrls: ['./card-form.component.scss']
 })
-export class CardFormComponent {
+export class CardFormComponent implements OnInit {
 
-  cardForm = new FormGroup({
-    name: new FormControl('', [
-      Validators.required
-    ]),
-    cardNumber: new FormControl('', [
-      Validators.required,
-      Validators.minLength(16),
-      Validators.maxLength(16)]),
-    expiration: new FormControl('', [
-      Validators.required,
-      Validators.pattern(/^(0[1-9]|1[0-2])\/\d{2}$/)
-    ]),
-    securityCode: new FormControl('', [
-      Validators.required,
-      Validators.minLength(3),
-      Validators.maxLength(3)
-    ])
-  });
+  cardForm: FormGroup;
 
   constructor() { }
+
+  ngOnInit() {
+    this.cardForm = new FormGroup({
+      name: new FormControl('', [
+        Validators.required
+      ]),
+      cardNumber: new FormControl('', [
+        Validators.required,
+        Validators.minLength(16),
+        Validators.maxLength(16)]),
+      expiration: new FormControl('', [
+        Validators.required,
+        Validators.pattern(/^(0[1-9]|1[0-2])\/\d{2}$/)
+      ]),
+      securityCode: new FormControl('', [
+        Validators.required,
+        Validators.minLength(3),
+        Validators.maxLength(3)
+      ])
+    });
+  }
 
   onSubmit() {
     console.log('submitted');
