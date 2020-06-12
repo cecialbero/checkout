@@ -23,26 +23,7 @@
       <h4>Sat: from {{ daysOpen.weekend }}</h4>
     </div>
     <div class="col six">
-      <form>
-        <div class="form-group">
-          <label>Name:</label>
-          <input type="text" (input)="inputsName($event)">
-        </div>
-        <div class="form-group">
-          <label>Phone:</label>
-          <input type="tel" (input)="inputsPhone($event)">
-        </div>
-        <div class="form-group">
-          <label>Subject:</label>
-          <app-select
-          [options]="selectOptions"></app-select>
-        </div>
-        <div class="form-group">
-          <label>Messages:</label>
-          <textarea></textarea>
-        </div>
-        <button [disabled]="!(name && phone)" class="btn btn-primary" (click)="sendData()">Contact</button>
-      </form>
+      <app-contact-form [selectOptions]="selectOptions"></app-contact-form>
     </div>
   </div>
 </section>

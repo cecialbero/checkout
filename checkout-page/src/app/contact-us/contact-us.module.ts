@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ContactUsComponent } from './contact-us.component';
-import { SelectModule } from '../shared/components/select/select.module';
+
+// Shared Components
+import { ContactFormModule } from '../shared/components/contact-form/contact-form.module';
 
 const routes: Routes = [
   { path: '', component: ContactUsComponent }
@@ -12,8 +15,10 @@ const routes: Routes = [
   declarations: [ContactUsComponent],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forChild(routes),
-    SelectModule
+    ContactFormModule
   ],
   exports: [ContactUsComponent]
 })
