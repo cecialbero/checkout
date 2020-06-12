@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { CardFormComponent } from './card-form.component';
 
-// Components
+// Shared Components
 import { InputModule } from '../input/input.module';
 import { CreditCardModule } from '../credit-card/credit-card.module';
 
@@ -12,7 +12,6 @@ import { CreditCardModule } from '../credit-card/credit-card.module';
   declarations: [CardFormComponent],
   imports: [
     CommonModule,
-    FormsModule,
     ReactiveFormsModule,
     InputModule,
     CreditCardModule
