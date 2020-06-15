@@ -24,4 +24,14 @@ export class SelectComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  closeSelectOptions() {
+    this.showOptions = false;
+  }
+
+  rotateOnClick() {
+    if (this.showOptions) {
+      return 'flip-icon';
+    }
+  }
+
 }
