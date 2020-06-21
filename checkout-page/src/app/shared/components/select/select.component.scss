@@ -26,18 +26,21 @@
       transition: all .2s;
     }
 
-    &.flip-icon:after {
-      top: 12px;
-      transition: all .2s;
+    &.flip-icon {
+      border: 1px solid #000;
+      &:after {
+        top: 11px;
+        transition: all .2s;
+      }
     }
   }
 
   ul {
     position: absolute;
-    top: 31px;
+    top: 33px;
     left: 0;
     right: 0;
-    padding: 8px 7px 5px;
+    padding: 8px 7px 0;
     border: 1px solid #ccc;
     background-color: #fff;
   }

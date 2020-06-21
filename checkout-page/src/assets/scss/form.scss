@@ -19,6 +19,11 @@ input:not([type='range']):not([type='radio']), textarea {
   color: #393939;
   margin-bottom: 15px;
 
+  &:focus {
+    border: 1px solid #000;
+    outline: none;
+  }
+
   &.input-error {
     border: 1px solid $danger-color;
   }
