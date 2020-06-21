@@ -35,4 +35,18 @@
     }
 
   }
+
+  article:nth-of-type(2) {
+    background-color: $secondary-color;
+    color: $invert-txt-color;
+
+    .btn-primary {
+      margin-top: 56px;
+    }
+
+    @media (min-width: 960px) {
+      width: 35%;
+      min-height: 370px;
+    }
+  }
 }

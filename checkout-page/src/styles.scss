@@ -73,20 +73,6 @@ body {
 /*Slider Articles*/
 .slider {
 
-  article:nth-of-type(2) {
-    background-color: $secondary-color;
-    color: $invert-txt-color;
-
-    .btn-primary {
-      margin-top: 56px;
-    }
-
-    @media (min-width: 960px) {
-      width: 35%;
-      min-height: 370px;
-    }
-  }
-
   .slider-big-txt {
     @extend .h1;
     @extend .semi-bold;
@@ -123,10 +109,6 @@ body {
 
   .month-year {
     margin: 5px 0 5px 25%;
-
-    @media (min-width: 560px) {
-
-    }
 
     > div {
       display: flex;
