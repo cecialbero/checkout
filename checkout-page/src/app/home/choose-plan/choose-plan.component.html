@@ -32,8 +32,10 @@
               <label for="year" [ngClass]="{'slider-big-txt' : yearValue}" >${{startup.year}}<span>/ year</span></label>
             </div>
           </div>
-
-          <button class="btn btn-secondary center" (click)="choosePlan('Startup')">Choose this plan</button>
+          <a 
+          class="btn btn-secondary center"  
+          [routerLink]="'/choose-this-plan'" 
+          [state]="{ plan: 'Startup' }">Choose this plan</a>
         </article>
 
         <!-- Second Article -->
@@ -45,7 +47,10 @@
           minValue="200"
           step="200"
           initialValue="400"></app-user-slider-year>
-          <button class="btn btn-primary center" (click)="choosePlan('Business')">Choose this plan</button>
+          <a 
+          class="btn btn-primary center"  
+          [routerLink]="'/choose-this-plan'" 
+          [state]="{ plan: 'Business' }">Choose this plan</a>
         </article>
 
         <!-- Third Article -->

@@ -10,12 +10,14 @@ export class ChooseThisPlanComponent implements OnInit {
   public planName: string;
 
   constructor(private router: Router) {
-    const navigation = this.router.getCurrentNavigation();
+    /*const navigation = this.router.getCurrentNavigation();
     const state = navigation.extras.state as {plan: string};
-    this.planName = state.plan;
+    this.planName = state.plan;*/
   }
 
   ngOnInit(): void {
+    this.planName = history.state.plan;
+    console.log(history);
   }
 
 }
