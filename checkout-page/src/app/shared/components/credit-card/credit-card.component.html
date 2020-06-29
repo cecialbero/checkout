@@ -1,16 +1,13 @@
 <article>
   <ul>
     <li>
-      <b>Card Number</b>
-      <p>{{ cardNumber }}</p>
+      <p>{{ cardNumber | mask: '0000 0000 0000 0000' }}</p>
     </li>
     <li>
-      <b>Name</b>
       <p>{{ name }}</p>
     </li>
     <li>
-      <b>Expiration</b>
-      <p>{{ expiration }}</p>
+      <p>{{ expiration | mask: '00/00' }}</p>
     </li>
   </ul>
 </article>

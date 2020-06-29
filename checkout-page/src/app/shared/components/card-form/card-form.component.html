@@ -7,7 +7,7 @@
 </div>
 
 <div class="col six">
-  <form [formGroup]="cardForm" (ngSubmit)="onSubmit">
+  <form [formGroup]="cardForm" (ngSubmit)="onSubmit()" [hidden]="submitted">
     <app-input
     label="Name:"
     [control]="cardForm.get('name')"></app-input>
@@ -37,4 +37,7 @@
     type="button"
     (click)="onReset()">Reset</button>
   </form>
+  <ng-container *ngIf="submitted">
+    <p>Thank you</p>
+  </ng-container>
 </div>

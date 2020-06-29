@@ -9,6 +9,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class CardFormComponent implements OnInit {
 
   cardForm: FormGroup;
+  public submitted = false;
 
   constructor() { }
 
@@ -23,7 +24,7 @@ export class CardFormComponent implements OnInit {
         Validators.maxLength(16)]),
       expiration: new FormControl('', [
         Validators.required,
-        Validators.pattern(/^(0[1-9]|1[0-2])\/\d{2}$/)
+        //Validators.pattern(/^(0[1-9]|1[0-2])\/\d{2}$/)
       ]),
       securityCode: new FormControl('', [
         Validators.required,
@@ -33,8 +34,8 @@ export class CardFormComponent implements OnInit {
     });
   }
 
-  onSubmit() {
-    console.log('submitted');
+  onSubmit() : boolean {
+    return this.submitted;
   }
 
   onReset() {
