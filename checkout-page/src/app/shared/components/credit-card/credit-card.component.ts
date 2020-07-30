@@ -14,7 +14,7 @@ export class CreditCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.name = 'Name';
+    this.name = 'Card Holder Name';
     this.cardNumber = '0000 0000 0000 0000';
     this.expiration = '00/00';
   }
