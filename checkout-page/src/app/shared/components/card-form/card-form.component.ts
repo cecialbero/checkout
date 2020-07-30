@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
@@ -7,7 +7,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./card-form.component.scss']
 })
 export class CardFormComponent implements OnInit {
-
+  @Output() formSubmitted = new EventEmitter<boolean>();
   cardForm: FormGroup;
   public submitted = false;
 
@@ -34,8 +34,9 @@ export class CardFormComponent implements OnInit {
     });
   }
 
-  onSubmit() : boolean {
-    return this.submitted;
+  onSubmit() {
+    this.submitted = true;
+    this.formSubmitted.emit(this.submitted);
   }
 
   onReset() {

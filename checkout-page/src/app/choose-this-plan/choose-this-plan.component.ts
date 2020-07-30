@@ -8,16 +8,17 @@ import { Router } from '@angular/router';
 })
 export class ChooseThisPlanComponent implements OnInit {
   public planName: string;
+  public showThankYou = false;
 
   constructor(private router: Router) {
-    /*const navigation = this.router.getCurrentNavigation();
-    const state = navigation.extras.state as {plan: string};
-    this.planName = state.plan;*/
   }
 
   ngOnInit(): void {
     this.planName = history.state.plan;
-    console.log(history);
+  }
+
+  submittedValue(value: boolean) {
+    this.showThankYou = value;
   }
 
 }
