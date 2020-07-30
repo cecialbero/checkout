@@ -9,16 +9,14 @@ import { Plan } from '../../model/plan';
 })
 export class UserTypeComponent implements OnInit {
 
-  public plans: Plan[];
-  public title = 'CHOOSE THIS PLAN IF YOU\'RE A...';
+  plans: Plan[];
+  title = 'CHOOSE THIS PLAN IF YOU\'RE A...';
 
   constructor(private service: PlanService) { }
 
   ngOnInit() {
     this.service.getPlan().subscribe( (data) => {
-      if (data) {
-        this.plans = data;
-      }
+      this.plans = data;
     });
   }
 

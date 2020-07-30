@@ -21,10 +21,8 @@ export class ContactUsComponent implements OnInit {
   ngOnInit() {
     this.companyService.getCompanyInfo()
       .subscribe((data) => {
-        if (data) {
-          this.company = data;
-          this.daysOpen = this.company['daysOpen'];
-        }
+        this.company = data;
+        this.daysOpen = this.company['daysOpen'];
       });
   }
 

@@ -17,9 +17,7 @@ export class CurrentPlanComponent implements OnInit {
   ngOnInit() {
     this.service.getCurrentPlan()
     .subscribe( (data) => {
-      if (data) {
-        this.currentPlan = data;
-      }
+      this.currentPlan = data;
     });
   }
 
