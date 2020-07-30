@@ -13,9 +13,6 @@ export class CompanyInfoService {
   constructor(private http: HttpClient) { }
 
   getCompanyInfo(): Observable<CompanyInfo> {
-    return this.http.get<CompanyInfo>(`${environment.db}/company`)
-      .pipe(
-        map(data => data)
-      );
+    return this.http.get<CompanyInfo>(`${environment.db}/company`);
   }
 }

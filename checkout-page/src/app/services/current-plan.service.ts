@@ -11,10 +11,7 @@ import { environment } from '../../environments/environment';
 export class CurrentPlanService {
   constructor(private http: HttpClient) { }
 
-  public getCurrentPlan(): Observable<CurrentPlan> {
-    return this.http.get<CurrentPlan>(`${environment.db}/current`)
-      .pipe(
-        map(data => data)
-      );
+  getCurrentPlan(): Observable<CurrentPlan> {
+    return this.http.get<CurrentPlan>(`${environment.db}/current`);
   }
 }

@@ -12,10 +12,7 @@ export class PlanService {
 
   constructor(private http: HttpClient) { }
 
-  public getPlan(): Observable<Plan[]> {
-    return this.http.get<Plan[]>(`${environment.db}/plans`)
-      .pipe(
-        map(data => data)
-      );
+  getPlan(): Observable<Plan[]> {
+    return this.http.get<Plan[]>(`${environment.db}/plans`);
   }
 }
