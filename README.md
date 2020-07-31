@@ -1,6 +1,7 @@
 # Landing Page
 
-Welcome! This is a demo landing page done with Angular 8.
+Welcome! This is a demo landing page done with Angular 9.
+I played around with API and endpoints implementation, Reactive Forms, rxjs and a couple of smart components.
 
 ## Development server
 
