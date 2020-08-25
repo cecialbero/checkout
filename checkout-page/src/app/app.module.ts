@@ -4,12 +4,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 
 // Components
 import { HeaderModule } from './shared/components/header/header.module';
-
-// Services
-import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,7 +19,6 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule,
     HeaderModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
