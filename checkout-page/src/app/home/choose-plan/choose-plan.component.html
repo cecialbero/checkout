@@ -6,9 +6,9 @@
       <div class="slider center-txt">
         <!-- First Article -->
         <article>
-          <div class="slider-big-txt">Startup</div>
+          <div class="slider-big-txt">{{ plan[0].name }}</div>
           <hr>
-          <div class="slider-big-txt">{{startup.users}}</div>
+          <div class="slider-big-txt">{{basic.users}}</div>
           <span class="slider-small-txt">users</span>
           <hr>
           <div class="month-year">
@@ -19,7 +19,7 @@
               (ngModel)="monthValue"
               [checked]="monthValue"
               (click)="onSelectMonth()">
-              <label for="month "[ngClass]="{'slider-big-txt' : monthValue}">${{startup.month}}<span>/ month</span></label>
+              <label for="month "[ngClass]="{'slider-big-txt' : monthValue}">${{basic.month}}<span>/ month</span></label>
             </div>
 
             <div>
@@ -29,18 +29,18 @@
               (ngModel)="yearValue"
               [checked]="yearValue"
               (click)="onSelectYear()">
-              <label for="year" [ngClass]="{'slider-big-txt' : yearValue}" >${{startup.year}}<span>/ year</span></label>
+              <label for="year" [ngClass]="{'slider-big-txt' : yearValue}" >${{basic.year}}<span>/ year</span></label>
             </div>
           </div>
           <a 
           class="btn btn-secondary center"  
           [routerLink]="'/choose-this-plan'" 
-          [state]="{ plan: 'Startup' }">Choose this plan</a>
+          [state]="{ plan: 'Basic' }">Choose this plan</a>
         </article>
 
         <!-- Second Article -->
         <article>
-          <div class="slider-big-txt">Business</div>
+          <div class="slider-big-txt">{{ plan[1].name }}</div>
           <hr>
           <app-user-slider-year
           maxValue="800"
@@ -50,14 +50,14 @@
           <a 
           class="btn btn-primary center"  
           [routerLink]="'/choose-this-plan'" 
-          [state]="{ plan: 'Business' }">Choose this plan</a>
+          [state]="{ plan: 'Standard' }">Choose this plan</a>
         </article>
 
         <!-- Third Article -->
         <article>
-          <div class="slider-big-txt">Enterprise</div>
+          <div class="slider-big-txt">{{ plan[2].name }}</div>
           <hr>
-          <div class="slider-big-txt">{{enterprise.users}}+</div>
+          <div class="slider-big-txt">{{gold.users}}+</div>
           <span class="slider-small-txt">users</span>
           <hr>
           <div class="btn-group">

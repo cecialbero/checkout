@@ -6,7 +6,7 @@
   },
   "plans": [
     {
-      "name": "Startup",
+      "name": "Basic",
       "description": ["Growing startup", "Freelancer with a few rotating clients"],
       "items": [
           "5 Project Rooms",
@@ -23,7 +23,7 @@
       ]
     },
     {
-      "name": "Business",
+      "name": "Standard",
       "description": ["Leading design team within a big company", "Distributed business in which visual collaboration is key to success"],
       "items": [
         "5 Project Rooms",
@@ -40,7 +40,7 @@
       ]
     },
     {
-      "name": "Enterprise",
+      "name": "Gold",
       "description": ["Business that successfully integrated BoxLab and is ready to deploy at scale", "Design-led Fortune 1000 Company"],
       "items": [
         "Unlimited Rooms",
