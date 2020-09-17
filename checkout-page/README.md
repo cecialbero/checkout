@@ -17,7 +17,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-Run `ng test --source-map=false` to execute the unit rest without the NetworkError.
+Run `ng test --source-map=false` to execute the unit tests without the NetworkError.
 
 ## Running end-to-end tests
 
