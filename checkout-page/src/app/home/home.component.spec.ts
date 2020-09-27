@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClientModule } from '@angular/common/http';
-import {RouterTestingModule} from "@angular/router/testing";
+import { RouterTestingModule } from "@angular/router/testing";
 
 import { HomeComponent } from './home.component';
 
@@ -28,16 +28,22 @@ describe('HomeComponent', () => {
 
   it('should contain the choose-plan component', async(() => {
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('app-choose-plan')).not.toBe(null);
+    const choosePlan = compiled.querySelector('app-choose-plan');
+
+    expect(choosePlan).not.toBe(null);
   }));
 
   it('should contain the user-type component', async(() => {
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('app-user-type')).not.toBe(null);
+    const userType = compiled.querySelector('app-user-type');
+
+    expect(userType).not.toBe(null);
   }));
 
   it('should contain the current-plan component', async(() => {
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('app-current-plan')).not.toBe(null);
+    const currentPlan = compiled.querySelector('app-current-plan');
+
+    expect(currentPlan).not.toBe(null);
   }));
 });
