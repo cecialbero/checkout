@@ -9,14 +9,14 @@ import { CurrentPlan } from '../../model/current-plan';
 })
 export class CurrentPlanComponent implements OnInit {
 
-  public currentPlan = <CurrentPlan>{};
+  currentPlan = <CurrentPlan>{};
 
   constructor(public service: CurrentPlanService) {
   }
 
   ngOnInit() {
     this.service.getCurrentPlan()
-    .subscribe( (data) => {
+    .subscribe( (data) => { 
       this.currentPlan = data;
     });
   }
