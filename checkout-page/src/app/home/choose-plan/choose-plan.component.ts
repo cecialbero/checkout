@@ -4,6 +4,8 @@ import { CompanyInfoService } from '../../services/company-info.service';
 import { PlanService } from '../../services/plan.service';
 import { CompanyInfo } from '../../model/company-info';
 import { Plan } from '../../model/plan';
+import {map} from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-choose-plan',
@@ -13,25 +15,13 @@ import { Plan } from '../../model/plan';
 export class ChoosePlanComponent implements OnInit {
 
   company = <CompanyInfo>{};
-  plan: Plan[];
+  basic: Plan;
+  standard: Plan;
+  gold: Plan;
 
   monthValue = true;
   yearValue = false;
 
-  basic = {
-    users: 5,
-    month: 29,
-    year: 300
-  };
-
-  standard = {
-    users: 5,
-    year: 600,
-  };
-
-  gold = {
-    users: 30
-  };
 
   constructor(public companyService: CompanyInfoService,
               public planService: PlanService,
@@ -45,7 +35,9 @@ export class ChoosePlanComponent implements OnInit {
 
     this.planService.getPlan()
     .subscribe((data) => {
-      this.plan = data;
+      this.basic = data.find(plan => plan.name == 'Basic');
+      this.standard = data.find(plan => plan.name == 'Standard');
+      this.gold = data.find(plan => plan.name == 'Gold');
     });
   }
 

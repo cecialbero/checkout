@@ -7,6 +7,9 @@
   "plans": [
     {
       "name": "Basic",
+      "users": 5,
+      "month": 29,
+      "year": 300,
       "description": ["Growing startup", "Freelancer with a few rotating clients"],
       "items": [
           "5 Project Rooms",
@@ -41,6 +44,7 @@
     },
     {
       "name": "Gold",
+      "users": 30,
       "description": ["Business that successfully integrated BoxLab and is ready to deploy at scale", "Design-led Fortune 1000 Company"],
       "items": [
         "Unlimited Rooms",
